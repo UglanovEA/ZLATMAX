@@ -202,10 +202,10 @@
 	display: grid;
 	grid-auto-flow: column;
 	justify-content: center;
-	margin: 0px auto;
+	margin: 0 auto;
 	overflow: hidden;
 	.swiper-pagination-bullet {
-		margin: 0px rem(7.5);
+		margin: 0 rem(7.5);
 		cursor: pointer;
 		height: rem(30);
 		width: rem(18);
@@ -246,13 +246,13 @@
 }
 //========================================================================================================================================================
 .products-new {
-	padding: rem(45) 0px 0px 0px;
+	padding: rem(45) 0 0 0;
 	position: relative;
 	background: url("@img/new-products/bg.jpg") bottom / cover no-repeat;
 	&::before {
 		content: "";
-		background-color: #fff;
-		height: 46px;
+		background-color: #ffffff;
+		height: rem(46);
 		position: absolute;
 		right: 0;
 		top: 0;
@@ -266,7 +266,7 @@
 	// .products-new__container
 	&__container {
 		display: grid;
-		row-gap: 40px;
+		row-gap: rem(40);
 		@media (min-width: $tablet) {
 			grid-template-columns: rem(400) 1fr;
 			align-items: start;
@@ -286,7 +286,7 @@
 	&__title {
 		font-weight: bold;
 		font-size: rem(30);
-		color: #fff;
+		color: #ffffff;
 		line-height: math.div(46, 30);
 		&:not(:last-child) {
 			margin-bottom: em(30, 30);
@@ -317,8 +317,8 @@
 	// .products-new__slider
 	&__slider {
 	}
-	// .products-new__swiper
-	&__swiper {
+	// .products-new__wrapper
+	&__wrapper {
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 50, 20);
 		}
