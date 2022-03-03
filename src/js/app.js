@@ -182,7 +182,7 @@ import * as flsScroll from "./files/scroll/scroll.js";
 
 /* Динамический адаптив */
 // Документация: https://template.fls.guru/template-docs/dinamicheskij-adaptiv.html
-// import "./libs/dynamic_adapt.js";
+import "./libs/dynamic_adapt.js";
 
 /* Форматирование чисел */
 // import './libs/wNumb.min.js';
