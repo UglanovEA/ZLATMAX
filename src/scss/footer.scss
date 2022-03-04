@@ -229,7 +229,7 @@
 			position: absolute;
 			bottom: -15px;
 			font-size: rem(10);
-			color: red;
+			color: #e64444;
 		}
 		&:not(:last-child) {
 			margin-bottom: rem(22);
@@ -245,6 +245,9 @@
 		border-radius: rem(3) 0 0 rem(3);
 		border: rem(1) solid #ffffff;
 		border-right: none;
+		&:focus {
+			outline: none;
+		}
 	}
 	// .footer-subscribe__button
 	&__button {
