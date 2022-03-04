@@ -506,10 +506,12 @@
 	}
 	// .menu-catalog__sub-menu
 	&__sub-menu {
+		position: absolute;
 		width: 100%;
 		left: 0;
 		top: 100%;
 		background-color: $mainDarkColor;
+		z-index: 6;
 	}
 	&__back {
 		display: none;
