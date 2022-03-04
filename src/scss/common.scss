@@ -436,12 +436,12 @@
 		border-radius: 50%;
 		&._active {
 			background-color: $mainOrange;
-			color: #fff;
+			color: #ffffff;
 		}
 		@media (any-hover: hover) {
 			&:hover {
 				background-color: $mainOrange;
-				color: #fff;
+				color: #ffffff;
 			}
 		}
 	}

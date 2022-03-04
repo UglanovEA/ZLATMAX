@@ -11,7 +11,7 @@
 		color: inherit;
 		text-align: left;
 		border: 1px solid #d9d9d9;
-		background-color: #fff;
+		background-color: #ffffff;
 		cursor: pointer;
 		width: 100%;
 		border-radius: 4px;
@@ -20,13 +20,12 @@
 	&__value {
 		display: flex;
 		align-items: center;
-		height: rem(30);
-		padding: 0 rem(15);
-		gap: rem(10);
-		> * {
-			flex: 1 1 auto;
-		}
-		&:after {
+		height: 30px;
+		min-width: 250px;
+		padding: 0px rem(15);
+		justify-content: space-between;
+		flex-direction: row-reverse;
+		&:before {
 			content: "";
 			align-self: stretch;
 			flex: 0 0 10px;
@@ -38,12 +37,6 @@
 				transform: rotate(-180deg);
 			}
 		}
-		&._select-pseudo-label {
-			&::before {
-				content: attr(data-pseudo-label);
-				opacity: 0.5;
-			}
-		}
 	}
 	// .select__text
 	&__text {
@@ -51,22 +44,22 @@
 	}
 	&__input {
 		width: 100%;
-		background-color: transparent;
 		height: 100%;
+		background-color: transparent;
 	}
 	// .select__options
 	&__options {
-		color: #000;
 		position: absolute;
-		top: 29px;
-		border-radius: 0 0 4px 4px;
+		top: 32px;
+		right: 0;
 		min-width: 100%;
-		left: 0;
-		background-color: #fff;
+		background-color: #ffffff;
+		color: #000;
+		border-radius: 0 0 4px 4px;
 		border-top: 0;
-		border: 1px solid #d9d9d9;
+		border: 1px solid rgba(4, 4, 4, 0.3);
 		border-top: 0;
-		padding: 10px 0px 5px 0px;
+		padding: 8px 0px 0px 0px;
 	}
 	// .select__scroll
 	&__scroll {
@@ -94,7 +87,7 @@
 		}
 		@media (any-hover: hover) {
 			&:hover {
-				background: #d9d9d9;
+				background: #141414;
 			}
 		}
 	}
@@ -122,6 +115,33 @@
 	&._select-multiple {
 	}
 	&._select-checkbox {
+	}
+	&_control {
+		.select__title {
+			border: 1px solid rgba(4, 4, 4, 0.3);
+			border-radius: rem(4);
+		}
+		.select__value {
+			height: rem(40);
+			color: rgba(0, 0, 0, 0.5);
+			&::before {
+				font-size: rem(8);
+				@extend %ic;
+				content: "\e900";
+				margin-left: em(10, 8);
+			}
+		}
+		.select__option {
+			color: rgba(0, 0, 0, 0.5);
+			@media (any-hover: hover) {
+				&:hover {
+					color: #ffffff;
+				}
+			}
+			&:last-child {
+				border-radius: 0 0 rem(4) rem(4);
+			}
+		}
 	}
 }
 
