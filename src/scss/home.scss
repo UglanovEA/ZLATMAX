@@ -512,3 +512,99 @@
 	}
 }
 //========================================================================================================================================================
+.products-block {
+	@include adaptiveValue("margin-bottom", 120, 40);
+	// .products-block__container
+	&__container {
+		display: grid;
+		gap: rem(30);
+		@media (min-width: $mobileSmall) {
+			grid-template-columns: repeat(auto-fit, minmax(rem(600), 1fr));
+		}
+	}
+	// .products-block__item
+	&__item {
+	}
+}
+.product-block {
+	overflow: hidden;
+	box-shadow: 0 rem(4) rem(20) rgba(0, 0, 0, 0.15);
+	position: relative;
+	min-height: rem(290);
+	transition: box-shadow 0.3s ease 0s;
+	@media (any-hover: hover) {
+		&:hover {
+			box-shadow: 0 rem(4) rem(25) rgba(0, 0, 0, 0.25);
+		}
+	}
+	// .product-block__body
+	&__body {
+		position: relative;
+		z-index: 2;
+		@include adaptiveValue("padding", 30, 20);
+	}
+	// .product-block__title
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: em(30, 24);
+		}
+	}
+	// .product-block__text
+	&__text {
+		font-size: rem(18);
+		line-height: math.div(27, 18);
+		&:not(:last-child) {
+			margin-bottom: em(46, 18);
+		}
+		@media (min-width: em(710)) {
+			max-width: rem(265);
+		}
+	}
+	// .product-block__link-title
+	&__link-title {
+		font-weight: 600;
+		font-size: rem(24);
+		line-height: math.div(34, 24);
+		display: inline-block;
+		&::after {
+			content: "";
+			width: rem(70);
+			height: rem(2);
+			display: block;
+			margin: rem(15) 0 0 0;
+			background-color: $mainOrange;
+			transition: width 0.8s ease 0s;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				&::after {
+					width: 100%;
+				}
+			}
+		}
+	}
+	// .product-block__image
+	&__image {
+		width: 100%;
+		text-align: right;
+		display: flex;
+		justify-content: flex-end;
+		align-items: flex-end;
+		transform: translate(0px, 8%);
+		img {
+			max-width: 100%;
+		}
+		@media (min-width: em(710)) {
+			position: absolute;
+			height: 100%;
+			top: 0;
+			right: 0;
+		}
+	}
+	// .product-block__button
+	&__button {
+		@media (max-width: em(710)) {
+			width: 100%;
+		}
+	}
+}
