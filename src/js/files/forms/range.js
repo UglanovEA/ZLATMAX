@@ -17,15 +17,24 @@ export function rangeInit() {
 			noUiSlider.create(item, {
 				start: [Number(fromValue.value), Number(toValue.value)], // [0,200000]
 				connect: true,
+				step: 1,
 				tooltips: [true, true],
 				range: {
-					min: [Number(fromValue.dataset.rangeFrom)],
-					max: [Number(toValue.dataset.rangeTo)],
+					min: Number(fromValue.dataset.rangeFrom),
+					max: Number(toValue.dataset.rangeTo),
+				},
+				format: {
+					to: function (value) {
+						return parseInt(value) + " руб.";
+					},
+					from: function (value) {
+						return parseInt(value);
+					},
 				},
 			});
 			item.noUiSlider.on("update", function (values, handle) {
-				fromValue.value = values[0];
-				toValue.value = values[1];
+				fromValue.value = parseInt(values[0]) + " руб.";
+				toValue.value = parseInt(values[1]) + " руб.";
 			});
 		});
 	}
