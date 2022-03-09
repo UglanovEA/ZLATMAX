@@ -2,6 +2,9 @@
 	@include adaptiveValue("padding-bottom", 120, 40);
 	// .catalog__container
 	&__container {
+		@media (max-width: $mobile) {
+			padding: 0;
+		}
 	}
 	// .catalog__body
 	&__body {
@@ -20,6 +23,8 @@
 	}
 	// .catalog__control
 	&__control {
+		position: relative;
+		z-index: 14;
 		display: flex;
 		justify-content: flex-end;
 		&:not(:last-child) {
@@ -80,7 +85,11 @@
 	}
 }
 .price-filter {
-	padding: rem(30) rem(45);
+	@include adaptiveValue("padding-right", 45, 15);
+	@include adaptiveValue("padding-left", 45, 15);
+	@include adaptiveValue("padding-bottom", 30, 15);
+	@include adaptiveValue("padding-top", 30, 15);
+	overflow: hidden;
 	// .price-filter__title
 	&__title {
 		display: flex;
@@ -106,9 +115,16 @@
 	}
 	// .price-filter__body
 	&__body {
-		padding: rem(30) 0 0 0;
+		padding: rem(30) rem(0) 0 rem(0);
 		&-padding {
-			padding: rem(30) rem(45);
+			@include adaptiveValue("padding-right", 45, 15);
+			@include adaptiveValue("padding-left", 45, 15);
+			@include adaptiveValue("padding-bottom", 30, 15);
+			@include adaptiveValue("padding-top", 30, 15);
+		}
+		@media (max-width: $mobile) {
+			padding-right: rem(25);
+			padding-left: rem(25);
 		}
 	}
 	// .price-filter__inputs
@@ -126,6 +142,9 @@
 		width: 50%;
 		height: rem(42);
 		text-align: center;
+		font-weight: 500;
+		font-size: rem(16);
+		line-height: math.div(20, 16);
 		padding: 0 rem(15);
 		&:not(:last-child) {
 			border-right: rem(1) solid #cbcbcb;
@@ -133,7 +152,7 @@
 	}
 	// .price-filter__range
 	&__range {
-		margin-bottom: rem(15);
+		margin-bottom: rem(25);
 	}
 }
 .item-filter-catalog {
@@ -145,7 +164,10 @@
 		background-color: $mainDarkColor;
 		width: 100%;
 		color: #ffffff;
-		padding: rem(13) rem(45);
+		padding-top: rem(13);
+		padding-bottom: rem(13);
+		@include adaptiveValue("padding-right", 45, 15);
+		@include adaptiveValue("padding-left", 45, 15);
 		font-weight: 600;
 		font-size: rem(20);
 		line-height: math.div(24, 20);
@@ -167,7 +189,10 @@
 	}
 	// .item-filter-catalog__body
 	&__body {
-		padding: rem(30) rem(45);
+		padding-top: rem(30);
+		@include adaptiveValue("padding-right", 45, 15);
+		@include adaptiveValue("padding-left", 45, 15);
+		@include adaptiveValue("padding-bottom", 30, 15);
 	}
 	// .item-filter-catalog__checkbox
 	&__checkbox {
