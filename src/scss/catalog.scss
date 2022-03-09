@@ -62,7 +62,7 @@
 		font-weight: 700;
 		font-size: rem(20);
 		line-height: math.div(24, 20);
-		padding: rem(20) rem(30);
+		padding: rem(20) rem(45);
 		color: #ffffff;
 		text-align: left;
 	}
@@ -81,10 +81,6 @@
 }
 .price-filter {
 	padding: rem(30) rem(45);
-	overflow: hidden;
-	&:not(:last-child) {
-		margin-bottom: rem(15);
-	}
 	// .price-filter__title
 	&__title {
 		display: flex;
@@ -110,12 +106,15 @@
 	}
 	// .price-filter__body
 	&__body {
-		padding: rem(30) 0px 0px 0px;
+		padding: rem(30) 0 0 0;
+		&-padding {
+			padding: rem(30) rem(45);
+		}
 	}
 	// .price-filter__inputs
 	&__inputs {
 		display: flex;
-		border: 1px solid #cbcbcb;
+		border: rem(1) solid #cbcbcb;
 		border-radius: rem(3);
 		overflow: hidden;
 		&:not(:last-child) {
@@ -127,23 +126,29 @@
 		width: 50%;
 		height: rem(42);
 		text-align: center;
-		padding: 0px rem(15);
+		padding: 0 rem(15);
 		&:not(:last-child) {
-			border-right: 1px solid #cbcbcb;
+			border-right: rem(1) solid #cbcbcb;
 		}
 	}
 	// .price-filter__range
 	&__range {
+		margin-bottom: rem(15);
 	}
 }
-
 .item-filter-catalog {
+	&:not(:last-child) {
+		margin-bottom: rem(8);
+	}
 	// .item-filter-catalog__title
 	&__title {
 		background-color: $mainDarkColor;
 		width: 100%;
-		color: #fff;
-		padding: rem(13) rem(30);
+		color: #ffffff;
+		padding: rem(13) rem(45);
+		font-weight: 600;
+		font-size: rem(20);
+		line-height: math.div(24, 20);
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -162,7 +167,7 @@
 	}
 	// .item-filter-catalog__body
 	&__body {
-		padding: rem(30);
+		padding: rem(30) rem(45);
 	}
 	// .item-filter-catalog__checkbox
 	&__checkbox {
