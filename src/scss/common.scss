@@ -399,6 +399,9 @@
 	justify-content: flex-end;
 	align-items: center;
 	@include adaptiveValue("gap", 30, 15);
+	@media (max-width: $mobile) {
+		justify-content: center;
+	}
 	// .pagging__arrow
 	&__arrow {
 		color: $mainOrange;

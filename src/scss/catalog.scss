@@ -44,7 +44,7 @@
 	&__footer {
 		display: flex;
 		justify-content: space-between;
-		gap: rem(20);
+		row-gap: rem(20);
 		@media (max-width: $tablet) {
 			flex-direction: column;
 		}
