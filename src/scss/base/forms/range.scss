@@ -246,12 +246,15 @@
 	width: 15px;
 }
 .noUi-tooltip {
+	display: none;
+}
+.noUi-active .noUi-tooltip {
 	display: block;
 	position: absolute;
-	border: 1px solid #d9d9d9;
-	border-radius: 3px;
-	background: #fff;
-	color: #000;
+	background: #fefefe;
+	color: rgba(20, 20, 20, 0.5);
+	font-size: rem(14);
+	line-height: math.div(17, 14);
 	padding: 5px;
 	text-align: center;
 	white-space: nowrap;
@@ -259,7 +262,7 @@
 .noUi-horizontal .noUi-tooltip {
 	transform: translate(-50%, 0);
 	left: 50%;
-	bottom: 120%;
+	bottom: -150%;
 }
 .noUi-vertical .noUi-tooltip {
 	transform: translate(0, -50%);

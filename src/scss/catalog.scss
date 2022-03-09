@@ -80,7 +80,11 @@
 	}
 }
 .price-filter {
-	padding: rem(30);
+	padding: rem(30) rem(45);
+	overflow: hidden;
+	&:not(:last-child) {
+		margin-bottom: rem(15);
+	}
 	// .price-filter__title
 	&__title {
 		display: flex;
@@ -115,7 +119,7 @@
 		border-radius: rem(3);
 		overflow: hidden;
 		&:not(:last-child) {
-			margin-bottom: rem(60);
+			margin-bottom: rem(30);
 		}
 	}
 	// .price-filter__input
