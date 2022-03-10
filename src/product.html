@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{ "title":"Карточка товара" })
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page page_inner">
+				<div class="page__header">
+					<div class="page__container">
+						<nav class="page__breadcrumbs breadcrumbs">
+							<ul class="breadcrumbs__list">
+								<li class="breadcrumbs__item">
+									<a href="./index.html" class="breadcrumbs__link" target="_blank">Главная</a>
+								</li>
+								<li class="breadcrumbs__item">
+									<a href="./catalog.html" class="breadcrumbs__link" target="_blank">Разделочные ножи</a>
+								</li>
+								<li class="breadcrumbs__item">
+									<span class="breadcrumbs__current">Нож Снегирь</span>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="product">
+					<div class="product__container">
+						<div class="product__main main-product">
+							<div class="main-product__images images-product">
+								<div class="images-product__slider swiper">
+									<div class="images-product__swiper swiper-wrapper">
+										<div class="images-product__slide-ibg swiper-slide">
+											<img src="@img/phoduct/01.jpg" alt="slide" />
+										</div>
+										<div class="images-product__slide-ibg swiper-slide">
+											<img src="@img/phoduct/01.jpg" alt="slide" />
+										</div>
+										<div class="images-product__slide-ibg swiper-slide">
+											<img src="@img/phoduct/01.jpg" alt="slide" />
+										</div>
+										<div class="images-product__slide-ibg swiper-slide">
+											<img src="@img/phoduct/01.jpg" alt="slide" />
+										</div>
+										<div class="images-product__slide-ibg swiper-slide">
+											<img src="@img/phoduct/01.jpg" alt="slide" />
+										</div>
+									</div>
+								</div>
+								<div class="images-product__thumbs thumbs-images swiper">
+									<div class="thumbs-images__swiper swiper-wrapper">
+										<div class="thumbs-images__slide-ibg swiper-slide">
+											<img src="@img/phoduct/01.jpg" alt="slide" />
+										</div>
+										<div class="thumbs-images__slide-ibg swiper-slide">
+											<img src="@img/phoduct/01.jpg" alt="slide" />
+										</div>
+										<div class="thumbs-images__slide-ibg swiper-slide">
+											<img src="@img/phoduct/01.jpg" alt="slide" />
+										</div>
+										<div class="thumbs-images__slide-ibg swiper-slide">
+											<img src="@img/phoduct/01.jpg" alt="slide" />
+										</div>
+										<div class="thumbs-images__slide-ibg swiper-slide">
+											<img src="@img/phoduct/01.jpg" alt="slide" />
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="main-product__body body-product">
+								<div class="body-product__header header-product">
+									<div class="header-product__line">
+										<h1 class="header-product__title">Нож Снегирь</h1>
+										<a href="#!" class="header-product__link _icon-compare"></a>
+										<a href="#!" class="header-product__link _icon-favorite"></a>
+									</div>
+									<div class="header-product__rating rating rating_set">
+										<div class="rating__body">
+											<div class="rating__active"></div>
+											<div class="rating__items">
+												<input type="radio" class="rating__item" value="1" name="rating" />
+												<input type="radio" class="rating__item" value="2" name="rating" />
+												<input type="radio" class="rating__item" value="3" name="rating" />
+												<input type="radio" class="rating__item" value="4" name="rating" />
+												<input type="radio" class="rating__item" value="5" name="rating" />
+											</div>
+										</div>
+										<div class="rating__value">3.6</div>
+									</div>
+									<div class="header-product__stock">В наличии</div>
+								</div>
+								<div class="body-product__table table-product">
+									<div class="table-product__label">Артикул:</div>
+									<div class="table-product__value">AF0000001952</div>
+									<div class="table-product__label">Торговая марка:</div>
+									<div class="table-product__value">WUESTHOF (Германия)</div>
+									<div class="table-product__label">Серия:</div>
+									<div class="table-product__value">Ножи серии Classic Ikon</div>
+									<div class="table-product__label">Бонусные баллы:</div>
+									<div class="table-product__value">38</div>
+								</div>
+								<div class="body-product__options options-product">
+									<div class="options-product__label">Сталь</div>
+									<div class="options-product__value">
+										<select name="form[]" class="control">
+											<option value="" disabled selected style="display: none" class="value-placeholder">Выбрать сталь</option>
+											<option value="1">100Х13М</option>
+											<option value="2">110Х18М-ШД</option>
+											<option value="3">40Х10С2М (ЭИ-107)</option>
+											<option value="5">50Х14МФ</option>
+											<option value="6">95Х18</option>
+											<option value="7">AUS-8</option>
+											<option value="8">ELMAX</option>
+											<option value="9">RWL-34</option>
+										</select>
+									</div>
+									<div class="options-product__label">Рукоять</div>
+									<div class="options-product__value">
+										<select name="form[]" class="control">
+											<option value="" disabled selected style="display: none" class="value-placeholder">Выбрать рукоять</option>
+											<option value="1">100Х13М</option>
+											<option value="2">110Х18М-ШД</option>
+											<option value="3">40Х10С2М (ЭИ-107)</option>
+											<option value="5">50Х14МФ</option>
+											<option value="6">95Х18</option>
+											<option value="7">AUS-8</option>
+											<option value="8">ELMAX</option>
+											<option value="9">RWL-34</option>
+										</select>
+									</div>
+									<div class="options-product__label">Гарда и тыльник</div>
+									<div class="options-product__value">
+										<select name="form[]" class="control">
+											<option value="" disabled selected style="display: none" class="value-placeholder">Выбрать гарда и тыльник</option>
+											<option value="1">100Х13М</option>
+											<option value="2">110Х18М-ШД</option>
+											<option value="3">40Х10С2М (ЭИ-107)</option>
+											<option value="5">50Х14МФ</option>
+											<option value="6">95Х18</option>
+											<option value="7">AUS-8</option>
+											<option value="8">ELMAX</option>
+											<option value="9">RWL-34</option>
+										</select>
+									</div>
+									<div class="options-product__label">Обработка клинка</div>
+									<div class="options-product__value">
+										<select name="form[]" class="control">
+											<option value="" disabled selected style="display: none" class="value-placeholder">Выбрать обработку клинка</option>
+											<option value="1">100Х13М</option>
+											<option value="2">110Х18М-ШД</option>
+											<option value="3">40Х10С2М (ЭИ-107)</option>
+											<option value="5">50Х14МФ</option>
+											<option value="6">95Х18</option>
+											<option value="7">AUS-8</option>
+											<option value="8">ELMAX</option>
+											<option value="9">RWL-34</option>
+										</select>
+									</div>
+								</div>
+								<div class="body-product__actions actions-product">
+									<div class="actions-product__header">
+										<div class="actions-product__price">3 865</div>
+										<div class="actions-product__bonus">+ 449 баллов за покупку</div>
+										<div
+											data-tippy-content="Вам будут начислены баллы в размере 5% от стоимости покупки. Их можно будет использовать на плату последующих заказов."
+											class="actions-product__info"
+										>
+											?
+										</div>
+									</div>
+									<div class="actions-product__row">
+										<div class="actions-product__quantity quantity">
+											<button type="button" class="quantity__button quantity__button_minus"></button>
+											<div class="quantity__input">
+												<input autocomplete="off" type="text" name="form[]" value="1" />
+											</div>
+											<button type="button" class="quantity__button quantity__button_plus"></button>
+										</div>
+										<div class="actions-product__buttons">
+											<a href="#!" class="actions-product__cart button"><span class="_icon-cart">В корзину</span></a>
+											<a href="#!" class="actions-product__button button button_black">Купить в 1 клик</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div data-tabs="992" class="product__info product-info">
+							<nav data-tabs-titles class="product-info__navigation">
+								<button type="submit" class="product-info__title _tab-active">Таб №1</button>
+								<button type="submit" class="product-info__title">Таб №2</button>
+								<button type="submit" class="product-info__title">Таб №3</button>
+							</nav>
+							<div data-tabs-body class="product-info__content">
+								<div class="product-info__body">
+									1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore odio exercitationem, excepturi similique nulla, voluptatem
+									reprehenderit neque a minima eaque tenetur? Quos fugit voluptate enim quo sed, minima error molestias!
+								</div>
+								<div class="product-info__body">
+									2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore odio exercitationem, excepturi similique nulla, voluptatem
+									reprehenderit neque a minima eaque tenetur? Quos fugit voluptate enim quo sed, minima error molestias!
+								</div>
+								<div class="product-info__body">
+									3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore odio exercitationem, excepturi similique nulla, voluptatem
+									reprehenderit neque a minima eaque tenetur? Quos fugit voluptate enim quo sed, minima error molestias!
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+	</body>
+</html>

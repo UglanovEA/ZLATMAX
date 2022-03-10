@@ -4,7 +4,7 @@ import { isMobile, FLS } from "./functions.js";
 import { flsModules } from "./modules.js";
 
 // Подключение из node_modules
-import tippy from 'tippy.js';
+import tippy from "tippy.js";
 
 // Подключение cтилей из src/scss/libs
 import "../../scss/libs/tippy.scss";
@@ -12,6 +12,7 @@ import "../../scss/libs/tippy.scss";
 //import 'tippy.js/dist/tippy.css';
 
 // Запускаем и добавляем в объект модулей
-flsModules.tippy = tippy('[data-tippy-content]', {
-
+flsModules.tippy = tippy("[data-tippy-content]", {
+	placement: "top-end",
+	arrow: false,
 });
