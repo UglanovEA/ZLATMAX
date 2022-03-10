@@ -58,25 +58,25 @@
 .body-product {
 	background: #fefefe;
 	box-shadow: 0 rem(4) rem(20) rgba(0, 0, 0, 0.1);
-	@include adaptiveValue("padding", 30, 15);
+	@include adaptiveValue("padding", 25, 15);
 	// .body-product__header
 	&__header {
 		border-bottom: rem(1) solid rgba(20, 20, 20, 0.15);
-		padding: 0 0 rem(30) 0;
+		padding: 0 0 rem(28) 0;
 	}
 	// .body-product__table
 	&__table {
 		border-bottom: rem(1) solid rgba(20, 20, 20, 0.15);
-		padding: rem(30) 0;
+		padding: rem(25) 0;
 	}
 	// .body-product__options
 	&__options {
 		border-bottom: rem(1) solid rgba(20, 20, 20, 0.15);
-		padding: rem(30) 0;
+		padding: rem(25) 0;
 	}
 	// .body-product__actions
 	&__actions {
-		padding: rem(30) 0 0 0;
+		padding: rem(25) 0 0 0;
 	}
 }
 .header-product {
@@ -217,7 +217,7 @@
 			align-items: center;
 			flex-direction: row-reverse;
 			&::before {
-				margin: 0px 0 0px rem(20);
+				margin: 0 0 0 rem(20);
 			}
 		}
 		@media (max-width: $mobileSmall) {
@@ -247,6 +247,7 @@
 	// .product-info__title
 	&__title {
 		font-size: rem(20);
+		font-weight: 600;
 		padding: rem(20) 0;
 		line-height: math.div(24, 20);
 		color: rgba(20, 20, 20, 0.5);
@@ -255,11 +256,15 @@
 			width: 100%;
 		}
 		&._tab-active {
+			font-weight: 700;
+			font-size: rem(20);
+			line-height: math.div(24, 20);
+			color: $mainDarkColor;
 			&::after {
 				content: "";
 				position: absolute;
 				width: 100%;
-				height: rem(1);
+				height: rem(2);
 				bottom: rem(-1);
 				left: 0;
 				background-color: $mainOrange;
@@ -269,6 +274,13 @@
 	// .product-info__content
 	&__content {
 		padding: rem(30) 0 0 0;
+		p {
+			font-size: rem(18);
+			line-height: math.div(27, 18);
+			&:not(:last-child) {
+				margin-bottom: rem(20);
+			}
+		}
 	}
 	// .product-info__body
 	&__body {
