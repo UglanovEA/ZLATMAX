@@ -56,6 +56,9 @@
 	}
 }
 .body-product {
+	@media (max-width: $mobile) {
+		margin: 0 -15px;
+	}
 	background: #fefefe;
 	box-shadow: 0 rem(4) rem(20) rgba(0, 0, 0, 0.1);
 	@include adaptiveValue("padding", 25, 15);
@@ -154,7 +157,7 @@
 	// .actions-product__header
 	&__header {
 		display: flex;
-		gap: rem(20);
+		@include adaptiveValue("column-gap", 20, 10);
 		align-items: center;
 		&:not(:last-child) {
 			margin-bottom: em(35, 30);
@@ -167,7 +170,7 @@
 		display: inline-block;
 		line-height: math.div(37, 30);
 		background: url("@img/icons/rub.svg") right no-repeat;
-		padding: 0 rem(30) 0 0;
+		@include adaptiveValue("padding-right", 30, 20);
 	}
 	// .actions-product__bonus
 	&__bonus {
@@ -176,6 +179,9 @@
 		font-size: rem(14);
 		line-height: math.div(17, 14);
 		color: rgba(20, 20, 20, 0.5);
+		@media (max-width: $mobile) {
+			display: none;
+		}
 	}
 	// .actions-product__info
 	&__info {
@@ -213,19 +219,19 @@
 	// .actions-product__cart
 	&__cart {
 		span {
-			display: flex;
+			display: inline-flex;
 			align-items: center;
 			flex-direction: row-reverse;
 			&::before {
-				margin: 0 0 0 rem(20);
+				margin: 0 0 0 rem(15);
 			}
 		}
-		@media (max-width: $mobileSmall) {
+		@media (max-width: $mobile) {
 			width: 100%;
 		}
 	}
 	&__button {
-		@media (max-width: $mobileSmall) {
+		@media (max-width: $mobile) {
 			width: 100%;
 		}
 	}
@@ -287,5 +293,39 @@
 		._tab-spoller & {
 			padding: rem(30) 0;
 		}
+	}
+}
+.body-product-info {
+	display: flex;
+	// .body-product-info__column
+	&__column {
+		padding: rem(0) rem(30) rem(0);
+		border-right: 1px solid rgba(20, 20, 20, 0.15);
+		&:last-child {
+			border-right: none;
+		}
+	}
+	// .body-product-info__title
+	&__title {
+		font-weight: 700;
+		font-size: rem(18);
+		line-height: math.div(22, 18);
+		&:not(:last-child) {
+			margin-bottom: rem(30);
+		}
+	}
+	// .body-product-info__properties
+	&__properties {
+		display: grid;
+		gap: rem(20);
+		@media (min-width: $mobile) {
+			grid-template-columns: rem(200) 1fr;
+		}
+	}
+	// .body-product-info__label
+	&__label {
+	}
+	// .body-product-info__value
+	&__value {
 	}
 }
