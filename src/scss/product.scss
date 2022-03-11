@@ -239,7 +239,12 @@
 .product-info {
 	background: #fefefe;
 	box-shadow: 0 rem(4) rem(20) rgba(0, 0, 0, 0.1);
-	padding: rem(10) rem(30) rem(30) rem(30);
+	padding-top: rem(10);
+	@include adaptiveValue("padding-left", 30, 10);
+	@include adaptiveValue("padding-right", 30, 10);
+	@media (max-width: $mobile) {
+		margin: 0 rem(-15);
+	}
 	// .product-info__navigation
 	&__navigation {
 		display: flex;
@@ -254,7 +259,8 @@
 	&__title {
 		font-size: rem(20);
 		font-weight: 600;
-		padding: rem(20) 0;
+		@include adaptiveValue("padding-top", 20, 10);
+		@include adaptiveValue("padding-bottom", 20, 10);
 		line-height: math.div(24, 20);
 		color: rgba(20, 20, 20, 0.5);
 		position: relative;
@@ -279,7 +285,16 @@
 	}
 	// .product-info__content
 	&__content {
-		padding: rem(30) 0 0 0;
+	}
+	// .product-info__body
+	&__body {
+		._tab-spoller & {
+			@include adaptiveValue("padding-top", 30, 15);
+			@include adaptiveValue("padding-bottom", 30, 15);
+		}
+	}
+	// .product-info__text
+	&__text {
 		p {
 			font-size: rem(18);
 			line-height: math.div(27, 18);
@@ -287,22 +302,26 @@
 				margin-bottom: rem(20);
 			}
 		}
-	}
-	// .product-info__body
-	&__body {
-		._tab-spoller & {
-			padding: rem(30) 0;
+		@media (min-width: $tablet) {
+			padding: rem(30) rem(30);
 		}
 	}
 }
 .body-product-info {
-	display: flex;
+	display: grid;
+	gap: rem(20);
+	grid-template-columns: repeat(auto-fit, minmax(rem(290), 1fr));
 	// .body-product-info__column
 	&__column {
-		padding: rem(0) rem(30) rem(0);
-		border-right: 1px solid rgba(20, 20, 20, 0.15);
-		&:last-child {
-			border-right: none;
+		&:not(:last-child) {
+			margin-bottom: rem(20);
+		}
+		@media (min-width: em(985)) {
+			padding: rem(30);
+			border-right: 1px solid rgba(20, 20, 20, 0.15);
+			&:last-child {
+				border-right: none;
+			}
 		}
 	}
 	// .body-product-info__title
@@ -311,15 +330,16 @@
 		font-size: rem(18);
 		line-height: math.div(22, 18);
 		&:not(:last-child) {
-			margin-bottom: rem(30);
+			@include adaptiveValue("margin-bottom", 30, 15);
 		}
 	}
 	// .body-product-info__properties
 	&__properties {
 		display: grid;
-		gap: rem(20);
+		row-gap: rem(10);
 		@media (min-width: $mobile) {
-			grid-template-columns: rem(200) 1fr;
+			grid-template-columns: repeat(auto-fit, minmax(rem(190), 1fr));
+			gap: rem(20);
 		}
 	}
 	// .body-product-info__label
@@ -327,5 +347,6 @@
 	}
 	// .body-product-info__value
 	&__value {
+		color: rgba(20, 20, 20, 0.5);
 	}
 }
