@@ -68,7 +68,7 @@
 							<div class="main-product__body body-product">
 								<div class="body-product__header header-product">
 									<div class="header-product__line">
-										<h1 class="header-product__title">Нож Снегирь</h1>
+										<h2 class="header-product__title">Нож Снегирь</h2>
 										<a href="#!" class="header-product__link _icon-compare"></a>
 										<a href="#!" class="header-product__link _icon-favorite"></a>
 									</div>
@@ -347,15 +347,13 @@
 						</div>
 					</div>
 				</div>
-				<section class="page__sale-products sale-products sale-products_no-bottom">
+				<div class="page__sale-products sale-products sale-products_no-bottom">
 					@@include('html/_products-slider.htm',{ "title":"Похожие товары", "moretext":"Все товары" })
-				</section>
-				<section class="page__sale-products sale-products">
-					@@include('html/_products-slider.htm',{ "title":"Рекомендуем", "moretext":"Все товары" })
-				</section>
+				</div>
+				<div class="page__sale-products sale-products">@@include('html/_products-slider.htm',{ "title":"Рекомендуем", "moretext":"Все товары" })</div>
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>
-		@@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+		@@include('html/_js.htm',{})
 	</body>
 </html>

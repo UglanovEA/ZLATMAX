@@ -358,7 +358,8 @@
 .breadcrumbs {
 	white-space: nowrap;
 	overflow: auto;
-	height: rem(22);
+	height: rem(32);
+
 	// .breadcrumbs__list
 	&__list {
 		display: flex;

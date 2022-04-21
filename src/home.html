@@ -186,23 +186,19 @@
 						</div>
 					</div>
 				</section>
-				<section class="page__hits-products hits-products">
+				<div class="page__hits-products hits-products">
 					@@include('html/_products-slider.htm',{ "title":"Хиты продаж", "moretext":"Перейти в каталог" })
-				</section>
-				<section class="page__new-products new-products">@@include('html/_products-new.htm',{ "title":"Новинки" })</section>
-				<section class="page__sale-products sale-products sale-products_no-bottom">
+				</div>
+				<div class="page__new-products new-products">@@include('html/_products-new.htm',{ "title":"Новинки" })</div>
+				<div class="page__sale-products sale-products sale-products_no-bottom">
 					@@include('html/_products-slider.htm',{ "title":"Акции", "moretext":"Все акции" })
-				</section>
-				<section class="page__sale-products sale-products">
+				</div>
+				<div class="page__sale-products sale-products">@@include('html/_products-slider.htm',{ "title":"Акции", "moretext":"Все акции" })</div>
+				<div class="page__new-products new-products new-products_no-top">@@include('html/_products-new.htm',{ "title":"Новинки" })</div>
+				<div class="page__sale-products sale-products sale-products_no-bottom">
 					@@include('html/_products-slider.htm',{ "title":"Акции", "moretext":"Все акции" })
-				</section>
-				<section class="page__new-products new-products new-products_no-top">@@include('html/_products-new.htm',{ "title":"Новинки" })</section>
-				<section class="page__sale-products sale-products sale-products_no-bottom">
-					@@include('html/_products-slider.htm',{ "title":"Акции", "moretext":"Все акции" })
-				</section>
-				<section class="page__sale-products sale-products">
-					@@include('html/_products-slider.htm',{ "title":"Акции", "moretext":"Все акции" })
-				</section>
+				</div>
+				<div class="page__sale-products sale-products">@@include('html/_products-slider.htm',{ "title":"Акции", "moretext":"Все акции" })</div>
 				<section class="page__articles-module articles-module">
 					<div class="articles-module__container">
 						<h2 class="articles-module__title">Наши статьи</h2>
@@ -282,9 +278,9 @@
 						</div>
 					</div>
 				</section>
-				<section class="page__hits-products hits-products">
+				<div class="page__hits-products hits-products">
 					@@include('html/_products-slider.htm',{ "title":"Фонари", "moretext":"Перейти в каталог" })
-				</section>
+				</div>
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>
