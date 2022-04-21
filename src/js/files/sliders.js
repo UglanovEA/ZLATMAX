@@ -27,10 +27,10 @@ import "../../scss/base/swiper.scss";
 function initSliders() {
 	// Перечень слайдеров
 	// Проверяем, есть ли слайдер на стронице
-	if (document.querySelector(".main-block__slider")) {
+	if (document.querySelector(".main__slider")) {
 		// Указываем скласс нужного слайдера
 		// Создаем слайдер
-		new Swiper(".main-block__slider", {
+		new Swiper(".main__slider", {
 			// Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
@@ -59,7 +59,7 @@ function initSliders() {
 			// Пагинация
 
 			pagination: {
-				el: ".controll-main-block__dotts",
+				el: ".controll-main__dotts",
 				clickable: true,
 			},
 
@@ -105,7 +105,7 @@ function initSliders() {
 			on: {
 				init: function (swiper) {
 					const allSlides = document.querySelector(".fraction-controll__all");
-					const allSlidesItems = document.querySelectorAll(".slide-main-block:not(.swiper-slide-duplicate)");
+					const allSlidesItems = document.querySelectorAll(".slide-main:not(.swiper-slide-duplicate)");
 					allSlides.innerHTML = allSlidesItems.length < 10 ? `0${allSlidesItems.length}` : allSlidesItems.length;
 				},
 				slideChange: function (swiper) {
